@@ -2,9 +2,6 @@ import React from 'react';
 import c from './Profile.module.css';
 
 
-
-
-
 const Profile = () => {
     return <div className={c.content}>
         <div>
