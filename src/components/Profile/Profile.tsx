@@ -7,13 +7,13 @@ const Profile = () => {
     return (
         <div className={c.content}>
             <div>
-                <img
-                    src='https://images.pexels.com/photos/248797/pexels-photo-248797.jpeg?auto=compress&cs=tinysrgb&h=350'/>
+                <img className={c.img}
+                    src='https://sport-marafon.ru/upload/iblock/0bb/0859-001.jpg'/>
             </div>
             <div>
                 ava + description
             </div>
-            <MyPosts/>
+            <MyPosts myposts = 'My Posts'/>
         </div>
     )
 }

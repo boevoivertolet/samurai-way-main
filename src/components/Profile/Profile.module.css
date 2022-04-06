@@ -1,6 +1,8 @@
 .content {
     grid-area: c;
-    background-color: Yellow;
+    background-color:deeppink;
 }
-
-
+.img {
+    width: 1000px;
+    height: 400px;
+}
