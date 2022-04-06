@@ -8,7 +8,7 @@ const Profile = () => {
         <div className={c.content}>
             <div>
                 <img className={c.img}
-                    src='https://sport-marafon.ru/upload/iblock/0bb/0859-001.jpg'/>
+                    src='https://memepedia.ru/wp-content/uploads/2020/10/ljagushonok-pepe-bet.jpg'/>
             </div>
             <div>
                 ava + description
