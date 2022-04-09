@@ -1,45 +1,42 @@
 import React from "react";
+import {NavLink} from "react-router-dom";
 import c from './Dialogs.module.css'
 
+
+const DialogItem = (props: any) => {
+    let path = '/dialogs/' + props.id;
+    return (
+        <div className={c.dialog + '' + c.active}>
+            <NavLink to={path}>{props.name}</NavLink>
+        </div>
+    )
+
+}
+
+const Message = (props: any) => {
+    return (<div className={c.dialog}>{props.message}</div>
+    )
+
+}
 
 export const Dialogs = () => {
     return (
         <div className={c.dialogs}>
             <div className={c.dialogsItems}>
-                <div className={c.dialog +''+c.active}>
-                    Ibrahim
-                </div>
-                <div className={c.dialog}>
-                    Muhammad
-                </div>
-                <div className={c.dialog}>
-                    Xattab
-                </div>
-                <div className={c.dialog}>
-                    Osama
-                </div>
-                <div className={c.dialog}>
-                    Suleyman
-                </div>
-                <div className={c.dialog}>
-                    Saddam
-                </div>
-                <div className={c.dialog}>
-                    Hadji
-                </div>
-                <div className={c.dialog}>
-                    Djohar
-                </div>
+                <DialogItem name='Ibragim' id='1'/>
+                <DialogItem name='Muhammad' id='2'/>
+                <DialogItem name='Xattab' id='3'/>
+                <DialogItem name='Osama' id='4'/>
+                <DialogItem name='Suleyman' id='5'/>
+                <DialogItem name='Saddam' id='6'/>
+                <DialogItem name='Hadji' id='7'/>
+                <DialogItem name='Djohar' id='8'/>
             </div>
             <div className={c.messages}>
-                <div className={c.message}>hi</div>
-                <div className={c.message}>hello</div>
-                <div className={c.message}>how are you?</div>
-                <div className={c.message}>what is love?</div>
-                <div className={c.message}>Baby dont heart me</div>
-                <div className={c.message}>Dont heart me</div>
-                <div className={c.message}>No more..</div>
-                <div className={c.message}>Vladislav!</div>
+                <Message message='Hi'/>
+                <Message message='Yo'/>
+                <Message message='Hello'/>
+                <Message message='Shalom'/>
 
             </div>
         </div>

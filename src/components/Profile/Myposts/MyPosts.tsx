@@ -5,10 +5,13 @@ import Post from "./post/Post";
 
 const MyPosts = (props: any) => {
     return (
-        <div>
-            {props.myposts}
+        <div className={c.postsBlock}>
+            <h3>{props.myposts}</h3>
             <div>
-                <textarea></textarea>
+                <div>
+                    <textarea></textarea>
+                </div>
+
                 <button>Add post</button>
             </div>
             <div className={c.posts}>
