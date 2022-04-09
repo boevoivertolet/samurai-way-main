@@ -1,24 +1,24 @@
 import React from 'react';
 import c from './Navbar.module.css';
-
+import {NavLink} from "react-router-dom";
 //присваиваем 2 класса 1 дивке <div className={`${c.item} ${c.active}`}>
 
 const Navbar = () => {
     return <nav className={c.nav}>
-        <div className={`${c.item} ${c.active}`}>
-            <a href='/profile'>Profile</a>
+        <div className={c.item}>
+            <NavLink to='/profile' activeClassName={c.activeLink}>Profile</NavLink>
         </div>
         <div className={c.item}>
-            <a href='/dialogs'>Messages</a>
-        </div>
-        <div className={c.item} >
-            <a href='/news' >News</a>
+            <NavLink to='/dialogs' activeClassName={c.activeLink}>Messages</NavLink>
         </div>
         <div className={c.item}>
-            <a href='/music'>Music</a>
+            <NavLink to='/news' activeClassName={c.activeLink}>News</NavLink>
         </div>
         <div className={c.item}>
-            <a href='/settings'>Settings</a>
+            <NavLink to='/music' activeClassName={c.activeLink}>Music</NavLink>
+        </div>
+        <div className={c.item}>
+            <NavLink to='/settings' activeClassName={c.activeLink}>Settings</NavLink>
         </div>
     </nav>
 }
