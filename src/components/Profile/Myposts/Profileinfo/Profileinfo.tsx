@@ -10,7 +10,7 @@ const ProfileInfo = () => {
                      src='https://memepedia.ru/wp-content/uploads/2020/10/ljagushonok-pepe-bet.jpg'/>
             </div>
             <div className={c.descriptionBlock}>
-                ava + description
+                ProfileINFO
             </div>
         </div>
     )

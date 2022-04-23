@@ -1,5 +1,5 @@
 import React from "react";
-import c from './Dialogs.module.css'
+import c from './News.module.css'
 
 
 export const News = () => {
