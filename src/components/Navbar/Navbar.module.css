@@ -12,3 +12,16 @@
 .item a.activeLink {
     color: pink;
 }
+.friends {
+    padding: 20px;
+}
+
+.img {
+    padding: 1px;
+    width: 35px;
+    height: 35px;
+    border-radius: 50px;
+    border-style: solid;
+    border-color: hotpink;
+}
+

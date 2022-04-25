@@ -1,21 +1,13 @@
-.dialogs {
-    display: grid;
-    grid-template-columns: 2fr 10fr;
-}
-
-.dialogsItems {
-    padding: 15px;
-}
-
 .messages {
     padding: 15px;
-
 }
 
-
-.dialogsItems .active {
-    color: pink;
-}
-.dialog{
+.dialog {
+    padding: 15px;
+    width: 50px;
+    height: auto;
+    border-radius: 40px;
+    border-color: rosybrown;
+    border-style: solid;
 
 }
