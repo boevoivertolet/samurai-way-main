@@ -12,9 +12,10 @@ import {Settings} from "./components/Settings/Settings";
 
 
 export type AppPropsType = {
-    posts: PostsProps[]
-    dialogs: DialogsProps[]
-    messages: MessagesProps[]
+    state: {
+        profilePage: { posts: PostsProps[],  }
+        dialogsPage: { messages: MessagesProps[],dialogs: DialogsProps[] }
+    },
 
 }
 
@@ -41,13 +42,14 @@ export type PostsProps = {
 const App = (props: AppPropsType) => {
 
     return (
+
         <BrowserRouter>
             <div className='app-wrapper'>
                 <Header/>
                 <Navbar/>
                 <div className='app-wrapper-content'>
-                    <Route path='/dialogs' render={() => <Dialogs dialogs={props.dialogs} messages={props.messages} />}/>
-                    <Route path='/profile' render={() => <Profile posts={props.posts}/>}/>
+                    <Route path='/dialogs' render={() => <Dialogs dialogs={props.state.dialogsPage.dialogs} messages={props.state.dialogsPage.messages} />}/>
+                    <Route path='/profile' render={() => <Profile posts={props.state.profilePage.posts}/>}/>
                     <Route path='/news' render={() => <News/>}/>
                     <Route path='/music' render={() => <Music/>}/>
                     <Route path='/settings' render={() => <Settings/>}/>
