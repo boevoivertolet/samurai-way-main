@@ -38,7 +38,7 @@ const App = (props: AppPropsType) => {
 
     return (
 
-        <BrowserRouter>
+
             <div className="app-wrapper">
                 <Header/>
                 <Navbar dialogs={props.state.dialogsPage.dialogs}/>
@@ -51,7 +51,7 @@ const App = (props: AppPropsType) => {
                     <Route path="/settings" render={() => <Settings/>}/>
                 </div>
             </div>
-        </BrowserRouter>
+
     );
 }
 
