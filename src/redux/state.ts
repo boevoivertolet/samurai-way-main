@@ -1,4 +1,4 @@
-let state ={
+let state = {
     profilePage: {
         posts: [
             {id: 1, text: 'Hi', likesCount: 1},
@@ -32,12 +32,15 @@ let state ={
     }
 
 
-
-
-
-
 }
-
+export let addPost = (postMessage: string) => {
+    let newPost = {
+        id: 5,
+        text: postMessage,
+        likesCount: 0
+    };
+    state.profilePage.posts.push(newPost);
+}
 
 
 export default state;

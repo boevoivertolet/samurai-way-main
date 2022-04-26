@@ -9,7 +9,7 @@ import {PostsProps} from '../../App';
 
 type ProfilePropsType ={
     posts: PostsProps[]
-
+    addPost: (postMessage: string) => void
 }
 
 
@@ -18,7 +18,7 @@ const Profile = (props: ProfilePropsType) => {
     return (
         <div className={c.content}>
             <ProfileInfo/>
-            <MyPosts posts={props.posts} myposts={'My POSTS'}/>
+            <MyPosts posts={props.posts} myposts={'My POSTS'} addPost={props.addPost}/>
         </div>
     )
 }

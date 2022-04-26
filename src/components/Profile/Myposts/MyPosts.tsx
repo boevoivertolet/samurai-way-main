@@ -6,7 +6,7 @@ import {PostsProps} from '../../../App';
 type MyPostsPropsType = {
     posts: PostsProps[]
     myposts: string
-
+    addPost:(postMessage: string) => void
 }
 
 
@@ -18,7 +18,7 @@ const MyPosts = (props: MyPostsPropsType) => {
     let addPost = () => {
         if (newPostElement.current){
         let text = newPostElement.current.value;
-        alert(text)
+        props.addPost(text)
     }}
 
 

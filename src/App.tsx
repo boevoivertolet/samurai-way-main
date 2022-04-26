@@ -15,7 +15,7 @@ export type AppPropsType = {
         profilePage: { posts: PostsProps[], }
         dialogsPage: { messages: MessagesProps[], dialogs: DialogsProps[] }
     },
-
+    addPost: (postMessage: string) => void
 }
 
 
@@ -45,7 +45,7 @@ const App = (props: AppPropsType) => {
                 <div className="app-wrapper-content">
                     <Route path="/dialogs" render={() => <Dialogs dialogs={props.state.dialogsPage.dialogs}
                                                                   messages={props.state.dialogsPage.messages}/>}/>
-                    <Route path="/profile" render={() => <Profile posts={props.state.profilePage.posts}/>}/>
+                    <Route path="/profile" render={() => <Profile posts={props.state.profilePage.posts} addPost={props.addPost}/>}/>
                     <Route path="/news" render={() => <News/>}/>
                     <Route path="/music" render={() => <Music/>}/>
                     <Route path="/settings" render={() => <Settings/>}/>
