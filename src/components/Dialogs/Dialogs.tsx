@@ -9,8 +9,11 @@ import {DialogsProps, MessagesProps} from '../../App';
 
 
 type DialogsPropsType ={
-    messages: MessagesProps[]
-    dialogs: DialogsProps[]
+
+    state: {
+        messages: MessagesProps[]
+        dialogs: DialogsProps[]
+    }
 }
 
 
@@ -18,9 +21,9 @@ type DialogsPropsType ={
 
 export const Dialogs = (props:DialogsPropsType ) => {
 
-    let messagesElements = props.messages.map((m) => <Message message={m.text}/>);
+    let messagesElements = props.state.messages.map((m) => <Message message={m.text}/>);
 
-    let dialogsElements = props.dialogs.map((d) => <DialogItem name={d.name} id={d.id}/>);
+    let dialogsElements = props.state.dialogs.map((d) => <DialogItem name={d.name} id={d.id}/>);
 
     return (
         <div className={c.dialogs}>

@@ -1,37 +1,48 @@
-import React  from 'react';
+import React from 'react';
 import c from './MyPosts.module.css';
 import Post from './post/Post';
 import {PostsProps} from '../../../App';
 
+
 type MyPostsPropsType = {
     posts: PostsProps[]
-    myposts: string
-    addPost:(postMessage: string) => void
+    mypPosts: string
+    addPost: (postMessage: string) => void
+    newPostText: string
 }
 
 
 const MyPosts = (props: MyPostsPropsType) => {
-    let postsElements = props.posts.map((p) => <Post message={p.text} likeCount={p.likesCount}/>)
-    let newPostElement:  React.RefObject<HTMLTextAreaElement> = React.createRef()
+    let postsElements = props.posts.map((p) => <Post key={p.id} message={p.text} likeCount={p.likesCount}/>)
+    let newPostElement: React.RefObject<HTMLTextAreaElement> = React.createRef()
     //let newPostElement = React.createRef<HTMLTextAreaElement>()
 
-    let addPost = () => {
-        if (newPostElement.current){
-        let text = newPostElement.current.value;
-        props.addPost(text)
-    }}
+    let addPostHandler = () => {
 
+        if (newPostElement.current) {
+            let text = newPostElement.current.value;
+            props.addPost(text)
+            newPostElement.current.value = ''
+        }
+    }
+    let onPostChange = () => {
+
+    }
 
 
     return (
         <div className={c.postsBlock}>
-            <h3>{props.myposts}</h3>
+            <h3>{props.mypPosts}</h3>
             <div>
                 <div>
-                    <textarea ref={newPostElement}></textarea>
+                    <textarea
+                        onChange={onPostChange}
+                        ref={newPostElement}
+                        value={props.newPostText}
+                    />
                 </div>
 
-                <button onClick={addPost}>Add post</button>
+                <button onClick={addPostHandler}>Add post</button>
             </div>
             <div className={c.posts}>
                 {postsElements}

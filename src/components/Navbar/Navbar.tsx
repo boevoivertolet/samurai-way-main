@@ -6,7 +6,10 @@ import {DialogsProps} from '../../App';
 
 
 type NavbarPropsType= {
-    dialogs: DialogsProps[]
+    state:{
+        dialogs: DialogsProps[]
+    }
+
 }
 
 const Navbar = (props: NavbarPropsType ) => {
@@ -31,9 +34,9 @@ const Navbar = (props: NavbarPropsType ) => {
               <NavLink to='/friends' activeClassName={c.activeLink}><b>Friends:</b></NavLink>
           </div>
             <div >
-                <span><img className={c.img} src="https://bipbap.ru/wp-content/uploads/2017/08/04.-risunki-dlya-srisovki-legkie-dlya-devochek.jpg"/></span ><span>{props.dialogs[0].name}</span><br/>
-                <span><img className={c.img} src="https://bipbap.ru/wp-content/uploads/2017/08/04.-risunki-dlya-srisovki-legkie-dlya-devochek.jpg"/></span><span>{props.dialogs[1].name}</span><br/>
-                <span><img className={c.img} src="https://bipbap.ru/wp-content/uploads/2017/08/04.-risunki-dlya-srisovki-legkie-dlya-devochek.jpg"/></span><span>{props.dialogs[2].name}</span><br/>
+                <span><img className={c.img} src="https://bipbap.ru/wp-content/uploads/2017/08/04.-risunki-dlya-srisovki-legkie-dlya-devochek.jpg"/></span ><span>{props.state.dialogs[0].name}</span><br/>
+                <span><img className={c.img} src="https://bipbap.ru/wp-content/uploads/2017/08/04.-risunki-dlya-srisovki-legkie-dlya-devochek.jpg"/></span><span>{props.state.dialogs[1].name}</span><br/>
+                <span><img className={c.img} src="https://bipbap.ru/wp-content/uploads/2017/08/04.-risunki-dlya-srisovki-legkie-dlya-devochek.jpg"/></span><span>{props.state.dialogs[2].name}</span><br/>
           </div>
         </div>
     </nav>
