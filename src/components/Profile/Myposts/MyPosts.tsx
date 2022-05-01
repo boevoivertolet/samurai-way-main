@@ -26,6 +26,8 @@ const MyPosts = (props: MyPostsPropsType) => {
         }
     }
     let onPostChange = () => {
+        let text = newPostElement.current?.value
+        console.log(text);
 
     }
 
