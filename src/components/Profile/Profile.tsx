@@ -14,6 +14,7 @@ type ProfilePropsType ={
         newPostText: string
     }
     addPost: (postMessage: string) => void
+    updateNewPostText:(newText:string) => void
 }
 
 
