@@ -15,7 +15,7 @@ export type AppPropsType = {
         profilePage: { posts: PostsProps[], newPostText: string }
         dialogsPage: { messages: MessagesProps[], dialogs: DialogsProps[] }
     },
-    addPost: (postMessage: string) => void
+    addPost: () => void
     updateNewPostText: (newText:string) => void
 }
 

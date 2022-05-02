@@ -7,7 +7,7 @@ import {PostsProps} from '../../../App';
 type MyPostsPropsType = {
     posts: PostsProps[]
     mypPosts: string
-    addPost: (postMessage: string) => void
+    addPost: () => void
     newPostText: string
     updateNewPostText: (newText:string) => void
 }
@@ -21,15 +21,14 @@ const MyPosts = (props: MyPostsPropsType) => {
     let addPostHandler = () => {
 
         if (newPostElement.current) {
-            let text = newPostElement.current.value;
-            props.addPost(text)
-            newPostElement.current.value = ''
+            props.addPost();
+
         }
     }
     let onPostChange = () => {
         let text = newPostElement.current?.value
         // @ts-ignore
-        props.updateNewPostText();
+        props.updateNewPostText(text);
 
 
     }

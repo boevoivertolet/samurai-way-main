@@ -48,7 +48,7 @@ let state = {
             {id: 5, text: 'oops', likesCount: 12345},
             {id: 6, text: 'vertolet', likesCount: 123456}
         ],
-        newPostText: 'Sasha'
+        newPostText: ''
 
 
     },
@@ -74,13 +74,14 @@ let state = {
 
 
 }
-export const addPost = (postMessage: string) => {
+export const addPost = () => {
     let newPost = {
         id: 5,
-        text: postMessage,
+        text: state.profilePage.newPostText,
         likesCount: 0
     };
     state.profilePage.posts.push(newPost);
+    state.profilePage.newPostText ='';
     rerenderEntireTree(state, addPost);
 }
 export const updateNewPostText = (newText:string) => {
