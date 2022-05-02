@@ -9,6 +9,7 @@ type MyPostsPropsType = {
     mypPosts: string
     addPost: (postMessage: string) => void
     newPostText: string
+    updateNewPostText: (newText:string) => void
 }
 
 
@@ -27,7 +28,9 @@ const MyPosts = (props: MyPostsPropsType) => {
     }
     let onPostChange = () => {
         let text = newPostElement.current?.value
-        console.log(text);
+        // @ts-ignore
+        props.updateNewPostText();
+
 
     }
 

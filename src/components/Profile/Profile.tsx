@@ -7,6 +7,7 @@ import {PostsProps} from '../../App';
 
 
 
+
 type ProfilePropsType ={
 
     profilePage:{
@@ -24,6 +25,7 @@ const Profile = (props: ProfilePropsType) => {
         <div className={c.content}>
             <ProfileInfo/>
             <MyPosts
+                updateNewPostText={props.updateNewPostText}
                 newPostText={props.profilePage.newPostText}
                 posts={props.profilePage.posts}
                 mypPosts={'My POSTS'}
