@@ -8,12 +8,13 @@ import { Route} from 'react-router-dom';
 import {News} from './components/News/News';
 import {Music} from './components/Music/Music';
 import {Settings} from './components/Settings/Settings';
+import {dialogsPageType, profilePageType} from './redux/state';
 
 
 export type AppPropsType = {
     state: {
-        profilePage: { posts: PostsProps[], newPostText: string }
-        dialogsPage: { messages: MessagesProps[], dialogs: DialogsProps[] }
+        profilePage:profilePageType
+        dialogsPage:dialogsPageType
     },
     addPost: () => void
     updateNewPostText: (newText:string) => void
